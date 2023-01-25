@@ -23,7 +23,7 @@ function Chat({ id, users }) {
   return (
     <Container onClick={enterChat}>
       {recipientUser ? (
-        <UserAvatar src={recipient.photoURL} />
+        <UserAvatar src={recipientUser.photoURL} />
       ) : (
         <UserAvatar>{recipientEmail[0].toUpperCase()}</UserAvatar>
       )}
@@ -40,7 +40,6 @@ const Container = styled.div`
   cursor: pointer;
   padding: 15px;
   word-break: break-word;
-
   :hover {
     background-color: #e9eaeb;
   }
